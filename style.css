@@ -1,0 +1,45 @@
+:root {
+    --bg--color:#000;
+}
+html {
+    font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: var(--bg--color);
+}
+a{
+    text-decoration: none;
+}
+div.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 15px;
+    border:0.2rem solid;
+}
+div#main-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#main-menu a {
+    color:white;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+#main-menu a::after {
+    content:"";
+    width: 0;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    transition: width 0.5s ease;
+}
+#main-menu a.active::after {
+    width: 100%;
+}
